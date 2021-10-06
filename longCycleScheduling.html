@@ -1,0 +1,58 @@
+<template>
+  <div class="c-container">
+    <lightning-layout
+      pull-to-boundary="medium"
+      multiple-rows="true"
+      horizontal-align="spread"
+      class="slds-float_left"
+    >
+      <lightning-layout-item
+        padding="around-medium"
+        size="12"
+        small-device-size="12"
+        medium-device-size="6"
+        large-device-size="6"
+      >
+       <!-- <div class="header-column">
+          <c-avonni-calendar value=2021-10-11 multi-value=2021-10-15 onchange={handleCalendarChange}></c-avonni-calendar>
+        </div>-->
+        <div class="header-column">
+          <c-avonni-calendar value={firstDate} multi-value={secondDate} onchange={handleCalendarChange}></c-avonni-calendar>
+        </div>
+
+      </lightning-layout-item>
+      <lightning-layout-item
+        padding="horizontal-medium"
+        size="12"
+        small-device-size="12"
+        medium-device-size="6"
+        large-device-size="6"
+      >
+        <div class="header-column">
+          <lightning-combobox
+            label="Scheduling Policy"
+            placeholder="Select Scheduling Policy"
+            options={options}
+            dropdown-alignment="center"
+            variant="standard"
+            required="true"
+          ></lightning-combobox>
+          <lightning-input
+            type="toggle"
+            label="Some option"
+            name="input1"
+            class="input-1"
+          ></lightning-input>
+        </div>
+      </lightning-layout-item>
+
+      <lightning-layout-item class="slds-align_absolute-center">
+        <lightning-button
+          label="Find Resources"
+          title="Neutral action"
+          class="button-1"
+        ></lightning-button>
+      </lightning-layout-item>
+    </lightning-layout>
+  </div>
+</template>
